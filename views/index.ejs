@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/common/mui.min.css">
+    <link rel="stylesheet" href="/css/common/swiper.min.css">
+    <link rel="stylesheet" href="/css/common/animate.min.css">
+    <link rel="stylesheet" href="/css/common/amazeui.css">
+    <link rel="stylesheet" href="/css/welcome.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!--<link rel="stylesheet" href="/css/phone.css">-->
+    <link rel="stylesheet" href="/css/todo.css">
+
+    <script>
+        if(!localStorage.welcome){
+            localStorage.welcome="yes";
+            location.href="/welcome";
+        }
+    </script>
+
+    <!--<script src="/js/common/mui.min.js"></script>-->
+    <script src="/js/common/jquery.min.js"></script>
+    <script src="/js/common/swiper.jquery.min.js"></script>
+    <script src="/js/common/swiper.animate1.0.2.min.js"></script>
+    <script src="/js/common/angular.min.js"></script>
+    <script src="/js/common/angular-route.min.js"></script>
+    <script src="/js/common/angular-animate.min.js"></script>
+    <script src="/js/common/amazeui.min.js"></script>
+    <script src="/js/common/touch.js"></script>
+
+    <script src="/js/layout/welcome.js"></script>
+
+    <script src="/js/controller.js"></script>
+    <script src="/js/service.js"></script>
+    <script src="/js/route.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="index">
+
+<div ng-view class="view-animate"></div>
+
+
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item mui-active"  ng-class="{'mui-active':active=='one'}"   ng-click="change('one')"  ng-href="#!/">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" ng-href="#!/phone" ng-class="{'mui-active':active=='two'}"   ng-click="change('two')">
+        <span class="mui-icon mui-icon-phone"></span>
+        <span class="mui-tab-label">通讯录</span>
+    </a>
+    <a class="mui-tab-item" href="#!/todo" ng-class="{'mui-active':active=='three'}"   ng-click="change('three')" >
+        <span class="mui-icon mui-icon-email"></span>
+        <span class="mui-tab-label">待办事项</span>
+    </a>
+    <a class="mui-tab-item" ng-class="{'mui-active':active=='four'}"   ng-click="change('four')">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">设置</span>
+    </a>
+</nav>
+
+</body>
+</html>

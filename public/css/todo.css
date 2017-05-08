@@ -1,0 +1,14 @@
+.mui-table-view-cell{
+    position: relative;
+}
+.mui-navigate-right{
+    position: relative;
+    z-index:1;
+    background:#fff;
+    border-bottom: 1px solid #ccc;
+}
+.mui-icon-trash{
+    position: absolute;
+    right:10px;top:10px;bottom:3px;
+    margin:auto;
+}

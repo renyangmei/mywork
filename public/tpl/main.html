@@ -1,0 +1,103 @@
+
+<style>
+    .view-animate {
+        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        animation:fadeIn 0s 1 0s;
+    }
+
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .view-animate.ng-enter{
+
+        display:block;
+        width:100%;
+        top:20px;
+        left:0;
+        opacity:1;
+    }
+    .view-animate.ng-leave{
+        opacity:0;
+    }
+    .view-animate.ng-enter {
+        opacity: 1;
+    }
+    /*.view-animate.ng-enter.ng-enter-active {*/
+    /*opacity: 0;*/
+    /*}*/
+    .view-animate.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+</style>
+
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">Work</h1>
+</header>
+
+<div class="swiper-container swiper-container1">
+    <div class="swiper-wrapper swiper-wrapper1">
+        <div class="swiper-slide">
+            <img src="../imgs/07.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../imgs/03.jpeg" alt="" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../imgs/04.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../imgs/05.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../imgs/06.jpg" alt="" />
+        </div>
+    </div>
+    <div class="rym_mark"></div>
+    <!--<div class="ym_head_button">-->
+        <!--<div class="ym_btn">-->
+            <!--<a href="">TAIYUAN</a>-->
+            <!--<div class="ym_head_circle">-->
+                <!--<div class="ym_head_l_circle"></div>-->
+                <!--<div class="ym_head_r_circle"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="ym_btn">-->
+            <!--<a href="">SHANXI</a>-->
+            <!--<div class="ym_head_circle">-->
+                <!--<div class="ym_head_l_circle"></div>-->
+                <!--<div class="ym_head_r_circle"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="swiper-pagination swiper-pagination1"></div>
+</div>
+
+<!--<div class="mui-content">-->
+<!--列表-->
+    <ul class="am-container">
+        <li class="am-g" ng-repeat="item in data">
+            <div class="am-u-sm-8 left">
+                <h3>
+                    <a href="#!/list?{{item.url}}">{{item.title}}</a>
+                </h3>
+                <p>{{item.info}}</p>
+            </div>
+            <div class="am-u-sm-4 right">
+                <a href="" class="imgs">
+                    <img src="{{item.img}}" alt="">
+                </a>
+            </div>
+        </li>
+    </ul>
+<!--</div>-->

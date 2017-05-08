@@ -1,0 +1,52 @@
+<style>
+    .view-animate {
+        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        animation:fadeIn 0s 1 0s;
+    }
+
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .view-animate.ng-enter{
+
+        display:block;
+        width:100%;
+        top:20px;
+        left:0;
+        opacity:1;
+    }
+    .view-animate.ng-leave{
+        opacity:0;
+    }
+    .view-animate.ng-enter {
+        opacity: 1;
+    }
+    /*.view-animate.ng-enter.ng-enter-active {*/
+    /*opacity: 0;*/
+    /*}*/
+    .view-animate.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="#!/todo"></a>
+    <h1 class="mui-title">新建内容</h1>
+</header>
+
+<div class="am-form-group updatecon">
+    <!--<label for="doc-ta-1">文本域</label>-->
+    <textarea class="" rows="5" id="doc-ta-1"></textarea>
+</div>
+
+<p class="updatetodo"><button type="button" class="am-btn am-btn-danger am-round">新建</button></p>

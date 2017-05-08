@@ -1,0 +1,22 @@
+angular.module("route",["ngRoute"])
+    .config(["$routeProvider",function(route){
+        route.when("/",{
+            templateUrl:"/tpl/main.html",
+            controller:"main"
+        }).when("/phone",{
+            templateUrl:"/tpl/phone.html",
+            controller:"phone"
+        }).when("/todo",{
+            templateUrl:"/tpl/todo.html",
+            controller:"todo"
+        }).when("/todoUpdate/:id",{
+            templateUrl:"/tpl/todoUpdate.html",
+            controller:"todoUpdate"
+        }).when("/todoEdit",{
+            templateUrl:"/tpl/todoEdit.html",
+            controller:"todoEdit"
+        }).when("/list",{
+            templateUrl:"/tpl/list.html",
+            controller:"list"
+        })
+    }])
